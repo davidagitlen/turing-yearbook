@@ -1,0 +1,6 @@
+.cohort {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px 10px;
+  padding: 0px 0px 0px 25px;
+}

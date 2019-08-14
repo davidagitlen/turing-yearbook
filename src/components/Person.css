@@ -1,0 +1,25 @@
+.person {
+  display: flex;
+  flex-direction: column;
+  height: 475px;
+  width: 88%;
+  background-color: rgba(225, 225, 225, .85);
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  height: 60%;
+  width: 87%;
+  border-radius: 25px;
+}
+
+p {
+  font-style: italic;
+}
+
+span {
+  font-weight: bold;
+  color: blue;
+}

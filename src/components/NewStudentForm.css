@@ -1,0 +1,10 @@
+.new-student-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 200px;
+  margin: auto;
+  background-color: rgba(225, 225, 225, .85);
+}
