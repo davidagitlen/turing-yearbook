@@ -2,7 +2,7 @@ import React from 'react';
 import Person from './Person';
 import './Cohort.css';
 
-const Cohort = ({people}) => {
+const Cohort = ({people, deletePerson}) => {
   const turingPeople = people.map(person => {
     return (
       <Person 
@@ -12,22 +12,10 @@ const Cohort = ({people}) => {
         superlative={person.superlative}
         id={person.id}
         key={person.id}
+        deletePerson={deletePerson}
         />
     )
   })
-
-  // const students = studentBody.map(person => {
-  //   return (
-  //     <Person
-  //       photo={person.photo}
-  //       name={person.name}
-  //       quote={person.quote}
-  //       superlative={person.superlative}
-  //       id={person.id}
-  //       key={person.id}
-  //     />
-  //   )
-  // })
 
   return (
     <div className='cohort'>

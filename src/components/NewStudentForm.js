@@ -7,6 +7,8 @@ class NewStudentForm extends Component {
 
     this.state = {
       name : '',
+      quote : '',
+      superlative : '',
       id : this.props.totalStudents.length * 2,
       photo: 'https://placekitten.com/200/300',
     }
@@ -21,6 +23,8 @@ class NewStudentForm extends Component {
     this.props.addStudent(this.state);
     this.setState({
       name : '',
+      quote : '',
+      superlative: '',
     })
   }
 
@@ -33,6 +37,18 @@ class NewStudentForm extends Component {
           placeholder="Student Name" 
           name="name"
           value={this.state.name}
+          onChange={event => this.handleChange(event)} />
+        <input 
+          type="text" 
+          placeholder="Quote" 
+          name="quote" 
+          value={this.state.quote} 
+          onChange={event => this.handleChange(event)}/>
+        <input
+          type="text"
+          placeholder="Superlative"
+          name="superlative"
+          value={this.state.superlative}
           onChange={event => this.handleChange(event)} />
         <button
           onClick={event => this.submitStudent(event)}>Add New Student</button>
