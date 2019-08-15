@@ -4,7 +4,20 @@
   justify-content: center;
   align-items: center;
   height: 250px;
-  width: 200px;
+  width: 400px;
   margin: auto;
   background-color: rgba(225, 225, 225, .85);
+}
+
+input {
+  height: 25px;
+  width: 200px;
+  margin: 10px 0px 10px 0px;
+}
+
+button {
+  height: 25px;
+  width: 150px;
+  margin: 10px 0px 0px 0px;
+  border-radius: 10px;
 }

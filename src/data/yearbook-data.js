@@ -17,7 +17,7 @@ const people = {
   students: [
     {id: 21, name: 'Chris', quote: 'I love kicking puppies. Also, if I were a pokemon I would be clefairy!', superlative: 'Most Likely To Kick a Puppy', photo: 'https://placekitten.com/200/300'},
     {id: 22, name: 'Brianna', quote: 'Sit down!', superlative: 'Most Likely to Calm David Down', photo: 'https://placekitten.com/200/300'},
-    {id: 23, name: 'Djavan', quote: 'So say you were making a project where you had to make cards, theoretically...', superlative: 'Most Likely to Be a Big Ol\' Blerd', photo: 'https://placekitten.com/200/300'},
+    {id: 23, name: 'Djavan', quote: 'So say you were making a project...', superlative: 'Most Likely to Be a Big Ol\' Blerd', photo: 'https://placekitten.com/200/300'},
     {id: 24, name: 'Jacob', quote: 'Let me tell you how I really messed up my knee!', superlative: 'Most Likely', photo: 'https://placekitten.com/200/300'},
     { id: 25, name: 'Brandy', quote: 'Be the rock stars I know you all are!', superlative: 'Most Likely to Kick Ass', photo: 'https://placekitten.com/200/300'},
     {id: 26, name: 'Eric', quote: 'Shut up, Chris!', superlative: 'Most Likely to Wear a Hawaiian Shirt', photo: 'https://placekitten.com/200/300'},
@@ -31,6 +31,7 @@ const people = {
     {id: 214, name: 'Emily', quote: 'Tabernacle!!', superlative: 'Most Likely to Know Why That\'s Funny', photo: 'https://placekitten.com/200/300'},
     {id: 215, name: 'Aidan', quote: '...', superlative: 'Most Likely to Be Verrrrry Quiet', photo: 'https://placekitten.com/200/300'},
     {id: 216, name: 'David', quote: 'Halp!', superlative: 'Most Likely to Have an Anxiety Attack', photo: 'https://placekitten.com/200/300'},
+    { id: 218, name: 'Ann', quote: 'Play stupid games, win stupid prizes!', superlative: 'Most Likely to Win a Stupid Prize', photo: 'https://placekitten.com/200/300' },
   ]
 }
 

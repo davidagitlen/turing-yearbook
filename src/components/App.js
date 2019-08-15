@@ -16,7 +16,7 @@ class App extends Component {
 
   addStudent = (newStudent) => {
     this.setState({studentBody: [...this.state.studentBody, newStudent]});
-  } 
+  }
 
   deletePerson = (id) => {
     const filteredStaff = 
