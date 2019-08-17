@@ -5,7 +5,8 @@
   align-items: center;
   height: 250px;
   width: 400px;
-  margin: auto;
+  margin: 10px auto;
+  padding: 10px;
   background-color: rgba(225, 225, 225, .85);
 }
 

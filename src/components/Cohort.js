@@ -2,8 +2,9 @@ import React from 'react';
 import Person from './Person';
 import './Cohort.css';
 
-const Cohort = ({people, deletePerson}) => {
+const Cohort = ({cohort, people, deleteStudent}) => {
   const turingPeople = people.map(person => {
+
     return (
       <Person 
         photo={person.photo}
@@ -12,7 +13,8 @@ const Cohort = ({people, deletePerson}) => {
         superlative={person.superlative}
         id={person.id}
         key={person.id}
-        deletePerson={deletePerson}
+        deleteStudent={deleteStudent}
+        cohort={cohort}
         />
     )
   })

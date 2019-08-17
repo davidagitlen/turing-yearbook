@@ -4,9 +4,10 @@ html {
 }
 
 body {
-  background: url('https://ak9.picdn.net/shutterstock/videos/1007204479/thumb/1.jpg');
-  background-size: cover;
-  background-attachment: fixed;
+  background: url(https://d682ma8ami8n4.cloudfront.net/images/TuringSchool_LogoMark_Gray.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   position: absolute;
   top: 0;
   bottom: 0;
