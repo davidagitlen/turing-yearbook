@@ -20,8 +20,9 @@ body {
   text-align: center;
 }
 
-h1 {
-  background-color: rgba(255, 255, 255, 0.95);
+h1,
+h2 {
+  background-color: rgba(220, 220, 220, 0.95);
   padding: 10px;
-  color: limegreen;
+  color: rgb(253, 161, 56);
 }

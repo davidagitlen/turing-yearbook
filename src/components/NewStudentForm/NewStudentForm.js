@@ -51,7 +51,8 @@ class NewStudentForm extends Component {
           value={this.state.superlative}
           onChange={event => this.handleChange(event)} />
         <button
-          onClick={event => this.submitStudent(event)}>Add New Student</button>
+          onClick={event => this.submitStudent(event)}
+          disabled={!this.state.name || !this.state.quote || !this.state.superlative}>Add New Student</button>
       </form>
     )
   }
