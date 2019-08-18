@@ -51,7 +51,7 @@ class App extends Component {
           people={this.state.studentBody} 
           deleteStudent={this.deleteStudent}
           editStudent={this.editStudent}/>
-        <NewStudentForm addStudent={this.addStudent} deletePerson={this.deletePerson} totalStudents={this.state.studentBody}/>
+        <NewStudentForm addStudent={this.addStudent} totalStudents={this.state.studentBody}/>
       </div>
     );
   }

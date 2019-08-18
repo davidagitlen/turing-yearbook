@@ -25,10 +25,11 @@ class NewStudentForm extends Component {
       name : '',
       quote : '',
       superlative: '',
-    })
+    });
   }
 
   render() {
+    const disableButton = !this.state.name || !this.state.quote || !this.state.superlative;
     return (
       <form className="new-student-form">
         <h3>Add a New Student!</h3>
@@ -52,7 +53,7 @@ class NewStudentForm extends Component {
           onChange={event => this.handleChange(event)} />
         <button
           onClick={event => this.submitStudent(event)}
-          disabled={!this.state.name || !this.state.quote || !this.state.superlative}>Add New Student</button>
+          disabled={disableButton}>Add New Student</button>
       </form>
     )
   }

@@ -3,7 +3,10 @@ import { shallow } from 'enzyme';
 import people from '../../data/yearbook-data.js';
 import Person from './Person';
 
+let testPerson, wrapper; 
+
 describe('Person', () => {
+
   it('should call editStudent prop with the Card\'s edited state when an edited element loses focus', () => {
     const editStudentMock = jest.fn();
     const testPerson = people.students[0];
@@ -48,6 +51,21 @@ describe('Person', () => {
     expect(wrapper.instance().handleChange).toHaveBeenCalled();
   });
 
+  it('should call deleteStudent prop with the person\'s id when the button is clicked', () => {
+    const deleteStudentMock = jest.fn();
+    const testPerson = people.students[0];
+    const wrapper = shallow(<Person
+      photo={testPerson.photo}
+      name={testPerson.name}
+      quote={testPerson.quote}
+      superlative={testPerson.superlative}
+      id={testPerson.id}
+      deleteStudent={deleteStudentMock}
+    />);
+    wrapper.find('button').simulate('click');
+    expect(deleteStudentMock).toHaveBeenCalledWith(21);
+  });
+
   it('should match the snapshot with all data passed in correctly', () => {
     const testPerson = people.students[0];
     const wrapper = shallow(<Person
@@ -59,5 +77,34 @@ describe('Person', () => {
     />);
 
     expect(wrapper).toMatchSnapshot();
-  })
+  });
+
+  it('should match the snapshot if the card\'s cohort prop is student', () => {
+    const testPerson = people.students[0];
+    const wrapper = shallow(<Person
+      photo={testPerson.photo}
+      name={testPerson.name}
+      quote={testPerson.quote}
+      superlative={testPerson.superlative}
+      id={testPerson.id}
+      cohort='student'
+    />);
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should match the snapshot if the card\'s cohort prop is staff', () => {
+    const testPerson = people.staff[0];
+    const wrapper = shallow(<Person
+      photo={testPerson.photo}
+      name={testPerson.name}
+      quote={testPerson.quote}
+      superlative={testPerson.superlative}
+      id={testPerson.id}
+      cohort='staff'
+    />);
+
+    expect(wrapper).toMatchSnapshot();
+  });
+  
 })
