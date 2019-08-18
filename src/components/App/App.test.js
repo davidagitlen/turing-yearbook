@@ -14,11 +14,8 @@ describe('App', () => {
     };
     const currentStudents = [...people.students]
     const expected = [...currentStudents, mockStudent];
-
     expect(wrapper.state('studentBody')).toEqual(currentStudents);
-
     wrapper.instance().addStudent(mockStudent);
-
     expect(wrapper.state('studentBody')).toEqual(expected);
   });
 
@@ -28,7 +25,7 @@ describe('App', () => {
       id: 21,
       name: 'Chris',
       quote: 'I love kicking puppies. Also, if I were a pokemon I would be clefairy!',
-      superlative: 'Most Likely To Kick a Puppy',
+      superlative: 'Most Likely to Kick a Puppy',
       photo: 'https://placekitten.com/200/300'
     }
     const testEdits = {
@@ -39,9 +36,7 @@ describe('App', () => {
       photo: 'https://placekitten.com/200/300'
     }
     expect(wrapper.state('studentBody')[0]).toEqual(firstStudent);
-
     wrapper.instance().editStudent(testEdits);
-
     expect(wrapper.state('studentBody')[0]).toEqual(testEdits);
   });
 
@@ -52,15 +47,12 @@ describe('App', () => {
       {id: 2, name: 'David'}
     ];
     wrapper.setState({studentBody : testStudents});
-
     wrapper.instance().deleteStudent(1);
-
     expect(wrapper.state('studentBody')).toEqual([{ id: 2, name: 'David' }]);
   });
 
   it('should match the snapshot with all data passed in correctly', () => {
     const wrapper = shallow(<App />);
-
     expect(wrapper).toMatchSnapshot();
   })
 })

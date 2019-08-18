@@ -16,38 +16,37 @@ class Person extends Component {
     this.setState({[event.target.getAttribute('name')]: event.target.innerText });
   }
 
-  submitEdit = () => {
-    this.props.editStudent(this.state)
-  }
-
   render() {
+    const editableClass = this.props.cohort === 'student' ? 'true' : 'false';
+    const displayClass = this.props.cohort === "student" ? "" : "display-none"; 
+
     return (
       <div className='person' data-id={this.props.id}>
         <img src={this.props.photo} alt={this.props.name + (' looking magnificent')}/>
         <h3 
-          contentEditable={this.props.cohort === 'student' ? 'true' : 'false'}
+          contentEditable={editableClass}
           suppressContentEditableWarning='true' 
           name='name'
           onKeyUp={event => this.handleChange(event)}
-          onBlur={this.submitEdit}
+          onBlur={() => this.props.editStudent(this.state)}
           >{this.props.name}</h3>
         <p 
-          contentEditable={this.props.cohort === 'student' ? 'true' : 'false'}
+          contentEditable={editableClass}
           suppressContentEditableWarning='true' 
           name='quote'
           onKeyUp={event => this.handleChange(event)}
-          onBlur={this.submitEdit}
+          onBlur={() => this.props.editStudent(this.state)}
           >{this.props.quote}</p>
         <span 
-          contentEditable={this.props.cohort === 'student' ? 'true' : 'false'}
+          contentEditable={editableClass}
           suppressContentEditableWarning='true' 
           name='superlative'
           onKeyUp={event => this.handleChange(event)}
-          onBlur={this.submitEdit}
+          onBlur={() => this.props.editStudent(this.state)}
           >{this.props.superlative}</span>
         <button 
           onClick={() => this.props.deleteStudent(this.props.id)}
-          className={this.props.cohort === "student" ? "" : "display-none"}
+          className={displayClass}
           >Delete Me!</button>
       </div>
     )

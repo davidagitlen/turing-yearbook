@@ -15,7 +15,7 @@ const people = {
     {id: 13, name: 'Jeff', quote: '::thoughtful nonsense::', superlative: 'Most Likely to Tell a Dad Joke', photo: 'https://i.ytimg.com/vi/DhqzMc_LXgQ/maxresdefault.jpg'},
   ],
   students: [
-    {id: 21, name: 'Chris', quote: 'I love kicking puppies. Also, if I were a pokemon I would be clefairy!', superlative: 'Most Likely To Kick a Puppy', photo: 'https://placekitten.com/200/300'},
+    {id: 21, name: 'Chris', quote: 'I love kicking puppies. Also, if I were a pokemon I would be clefairy!', superlative: 'Most Likely to Kick a Puppy', photo: 'https://placekitten.com/200/300'},
     {id: 22, name: 'Brianna', quote: 'Sit down!', superlative: 'Most Likely to Calm David Down', photo: 'https://placekitten.com/200/300'},
     {id: 23, name: 'Djavan', quote: 'So say you were making a project...', superlative: 'Most Likely to Be a Big Ol\' Blerd', photo: 'https://placekitten.com/200/300'},
     {id: 24, name: 'Jacob', quote: 'Let me tell you how I really messed up my knee!', superlative: 'Most Likely', photo: 'https://placekitten.com/200/300'},
