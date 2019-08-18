@@ -18,6 +18,7 @@ class App extends Component {
   }
 
   editStudent = (editedStudent) => {
+    console.log(editedStudent)
     let editedStudentBody = [...this.state.studentBody];
     editedStudentBody.forEach(student => {
       if(student.id === editedStudent.id) {

@@ -5,6 +5,7 @@ class Person extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      id: this.props.id,
       name: this.props.name,
       quote: this.props.quote,
       superlative: this.props.superlative,
@@ -13,6 +14,10 @@ class Person extends Component {
 
   handleChange = (event) => {
     this.setState({[event.target.getAttribute('name')]: event.target.innerText });
+  }
+
+  submitEdit = () => {
+    this.props.editStudent(this.state)
   }
 
   render() {
@@ -24,18 +29,21 @@ class Person extends Component {
           suppressContentEditableWarning='true' 
           name='name'
           onKeyUp={event => this.handleChange(event)}
+          onBlur={this.submitEdit}
           >{this.props.name}</h3>
         <p 
           contentEditable={this.props.cohort === 'student' ? 'true' : 'false'}
           suppressContentEditableWarning='true' 
           name='quote'
           onKeyUp={event => this.handleChange(event)}
+          onBlur={this.submitEdit}
           >{this.props.quote}</p>
         <span 
           contentEditable={this.props.cohort === 'student' ? 'true' : 'false'}
           suppressContentEditableWarning='true' 
           name='superlative'
           onKeyUp={event => this.handleChange(event)}
+          onBlur={this.submitEdit}
           >{this.props.superlative}</span>
         <button 
           onClick={() => this.props.deleteStudent(this.props.id)}

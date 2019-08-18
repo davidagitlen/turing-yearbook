@@ -2,7 +2,7 @@ import React from 'react';
 import Person from './Person';
 import './Cohort.css';
 
-const Cohort = ({cohort, people, deleteStudent}) => {
+const Cohort = ({cohort, people, deleteStudent, editStudent}) => {
   const turingPeople = people.map(person => {
 
     return (
@@ -14,6 +14,7 @@ const Cohort = ({cohort, people, deleteStudent}) => {
         id={person.id}
         key={person.id}
         deleteStudent={deleteStudent}
+        editStudent={editStudent}
         cohort={cohort}
         />
     )
